@@ -1,4 +1,4 @@
-# Canon R7 LUT Lab
+# Canon LUT Lab
 
 将纯 3D `.cube` LUT 转成 Canon EOS R7 可选用的自定义照片风格，让效果进入机身实时预览与 JPEG。这个仓库公开的是**实测方法和代码**，不包含相机固件、佳能软件、第三方 LUT、设备数据或私人照片。
 

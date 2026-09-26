@@ -1,4 +1,4 @@
-# Canon R7 LUT Lab — English summary
+# Canon LUT Lab — English summary
 
 This project documents an experimentally verified route for converting a pure 3D `.cube` LUT into a Canon EOS R7 user-defined Picture Style that affects live preview and camera JPEGs. It does not modify firmware or add an in-camera CUBE browser.
 
