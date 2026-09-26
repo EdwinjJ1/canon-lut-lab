@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a reproducible issue without uploading camera or user data
+labels: ["bug"]
+body:
+  - type: textarea
+    id: stage
+    attributes:
+      label: Failure stage and expected behavior
+      description: Snapshot, PF3 bridge, native compile, install, live preview, JPEG or restart?
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Camera model and firmware
+    validations:
+      required: true
+  - type: input
+    id: software
+    attributes:
+      label: macOS / EOS Utility / PSE versions
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs and checks
+      description: Return code, file sizes, library hashes and error event. Remove camera descriptors, payloads, serial numbers, private paths, photos and LUT files.
+    validations:
+      required: true

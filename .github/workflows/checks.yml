@@ -1,0 +1,23 @@
+name: Checks
+on:
+  push:
+  pull_request:
+jobs:
+  portable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: node --test test_core.cjs
+      - run: python -m py_compile src/cfp_bridge.py src/compile_r7_dense.py src/prepare_fuji_nc.py compare_lut_pair.py
+      - run: python tests/check_public_tree.py
+  macos-build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: clang -fobjc-arc -fsyntax-only src/eds_snapshot.m src/eds_install_one.m

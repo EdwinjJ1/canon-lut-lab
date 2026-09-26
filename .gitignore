@@ -1,0 +1,17 @@
+# Camera, SDK and user content must remain local.
+local/
+build/
+*.pf3
+*.bin
+*.cube
+*.JPG
+*.JPEG
+*.CR3
+*.zip
+*.dmg
+*.pkg
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
